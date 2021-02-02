@@ -25,6 +25,22 @@ function App() {
                         onSubmit={console.log}
                     >
                         <Form>
+                            <Grid container spacing={2}>
+
+                                <Grid item xs={12}>
+                                    <Typography>Your details</Typography>
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Typography>Address</Typography>
+                                </Grid>
+
+
+                                <Grid item xs={12}>
+                                    <Typography>Booking information</Typography>
+                                </Grid>
+
+                            </Grid>
 
                         </Form>
                     </Formik>
