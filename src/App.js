@@ -4,9 +4,19 @@ import {Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import Header from './components/Header';
 
-const INITIAL_FORM_STATE = {}
+const INITIAL_FORM_STATE = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: ''
+}
 
-const FORM_VALIDATION = Yup.object().shape({});
+const FORM_VALIDATION = Yup.object().shape({
+    firstName: Yup.string().required('Required'),
+    lastName: Yup.string().required('Required'),
+    email: Yup.string().email('Invalid Email'),
+    phone: Yup.number().integer().typeError("Please enter a valid number").required('Required')
+});
 
 function App() {
     return (
