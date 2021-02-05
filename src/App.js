@@ -3,6 +3,7 @@ import {Container, Grid, Toolbar, Typography} from '@material-ui/core';
 import {Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import Header from './components/Header';
+import Textfield from "./components/FormsUI/Textfield";
 
 const INITIAL_FORM_STATE = {
     firstName: '',
@@ -39,6 +40,21 @@ function App() {
 
                                 <Grid item xs={12}>
                                     <Typography>Your details</Typography>
+                                </Grid>
+
+                                <Grid item xs={6}>
+                                    <Textfield name="firstName" label="First Name"></Textfield>
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <Textfield name="lastName" label="Last Name"></Textfield>
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Textfield name="email" label="Email"></Textfield>
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Textfield name="phone" label="Phone Number"></Textfield>
                                 </Grid>
 
                                 <Grid item xs={12}>
